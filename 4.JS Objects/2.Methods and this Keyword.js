@@ -31,4 +31,3 @@ const student = {
 console.log(student.name)
 
 student.bio()
-
