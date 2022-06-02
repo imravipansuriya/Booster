@@ -23,7 +23,7 @@ Rejected
 
 // ex 1 
 
-let count = true;
+let count = false;
 
 let countValue = new Promise(function(resolve, reject){
     if(count){
@@ -33,4 +33,17 @@ let countValue = new Promise(function(resolve, reject){
     }
 })
 
-console.log(countValue)
+countValue.then( function successValue(result){
+    console.log(result)
+})
+
+.then(function successValue1(){
+    console.log("Func 2")
+}).catch(
+    function errorValue(result){
+        console.log(result)
+    }
+) 
+
+
+
